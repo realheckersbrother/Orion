@@ -597,11 +597,8 @@ local IconsJson = [[
   }
 }
 ]]
-local Icons = {}
 
-local Success, Response = pcall(function()
-	Icons = HttpService:JSONDecode(IconsJson).icons
-end)
+local Icons = HttpService:JSONDecode(IconsJson).icons
 
 if not Success then
 	warn("\nOrion Library - Failed to load Feather Icons. Error code: " .. Response .. "\n")
