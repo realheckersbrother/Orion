@@ -25,7 +25,6 @@ local OrionLib = {
 	SaveCfg = false
 }
 
---Feather Icons https://github.com/evoincorp/lucideblox/tree/master/src/modules/util - Created by 7kayoh
 local IconsJson = [[
 {
   "icons": {
@@ -599,10 +598,6 @@ local IconsJson = [[
 ]]
 
 local Icons = HttpService:JSONDecode(IconsJson).icons
-
-if not Success then
-	warn("\nOrion Library - Failed to load Feather Icons. Error code: " .. Response .. "\n")
-end
 
 local function GetIcon(IconName)
 	if Icons[IconName] ~= nil then
