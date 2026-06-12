@@ -25,7 +25,7 @@ local OrionLib = {
 	SaveCfg = false
 }
 
-local IconsJson = loadstring([[
+local IconsJson = [[
   "icons": {
     "aperture": "rbxassetid://7733666258",
     "bug": "rbxassetid://7733701545",
@@ -593,9 +593,9 @@ local IconsJson = loadstring([[
     "shield-off": "rbxassetid://7734056540",
     "wrench": "rbxassetid://7743878358"
   }
-]])
+]]
 
-local Icons = HttpService:JSONDecode(IconsJson)
+local Icons = HttpService:JSONDecode(IconsJson).icons
 
 local function GetIcon(IconName)
 	if Icons[IconName] ~= nil then
