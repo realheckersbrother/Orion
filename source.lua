@@ -25,7 +25,7 @@ local OrionLib = {
 	SaveCfg = false
 }
 
-local IconsJson = [[
+local IconsJson = loadstring([[
   "icons": {
     "aperture": "rbxassetid://7733666258",
     "bug": "rbxassetid://7733701545",
@@ -593,7 +593,7 @@ local IconsJson = [[
     "shield-off": "rbxassetid://7734056540",
     "wrench": "rbxassetid://7743878358"
   }
-]]
+]])
 
 local Icons = HttpService:JSONDecode(IconsJson)
 
