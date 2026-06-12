@@ -25,7 +25,7 @@ local OrionLib = {
 	SaveCfg = false
 }
 
-local Icons = {
+local IconsJson = [[
   "icons": {
     "aperture": "rbxassetid://7733666258",
     "bug": "rbxassetid://7733701545",
@@ -593,11 +593,9 @@ local Icons = {
     "shield-off": "rbxassetid://7734056540",
     "wrench": "rbxassetid://7743878358"
   }
-}
+]]
 
-if not Success then
-	warn("\nOrion Library - Failed to load Feather Icons. Error code: " .. Response .. "\n")
-end	
+local Icons = HttpService:JSONDecode(IconsJson)
 
 local function GetIcon(IconName)
 	if Icons[IconName] ~= nil then
